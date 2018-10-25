@@ -1,0 +1,25 @@
+
+apt-get update
+
+apt-get install git-core
+
+git --version
+
+git config --global user.name "testuser"
+git config --global user.email "testuser@example.com"
+#It’s important to know that git configs work on a user by user basis. For example if you have a ‘david’ Linux user and they will be working with git then David should run the same commands from his user account. By doing this the commits made by the ‘david’ Linux user will be done under his details in git.
+
+mkdir hello
+cd hello
+touch hello.html
+git init
+git add hello.html
+git commit -m "First Commit"
+git status
+
+edit hello.html
+git add hello.html
+git status
+#Changes to the hello.html have been staged. This means that git knows about the change, but it is not permanent in the repository. The next commit will include the changes staged.
+
+git commit -m "Changes for a and b"
